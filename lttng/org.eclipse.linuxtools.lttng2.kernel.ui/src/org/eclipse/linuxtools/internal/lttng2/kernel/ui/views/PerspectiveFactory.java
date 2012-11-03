@@ -14,7 +14,7 @@ package org.eclipse.linuxtools.internal.lttng2.kernel.ui.views;
 
 import org.eclipse.linuxtools.internal.lttng2.kernel.ui.views.controlflow.ControlFlowView;
 import org.eclipse.linuxtools.internal.lttng2.kernel.ui.views.resources.ResourcesView;
-import org.eclipse.linuxtools.internal.lttng2.ui.views.control.ControlView;
+//import org.eclipse.linuxtools.internal.lttng2.ui.views.control.ControlView;
 import org.eclipse.linuxtools.tmf.ui.views.events.TmfEventsView;
 import org.eclipse.linuxtools.tmf.ui.views.histogram.HistogramView;
 import org.eclipse.linuxtools.tmf.ui.views.statistics.TmfStatisticsView;
@@ -33,7 +33,7 @@ public class PerspectiveFactory implements IPerspectiveFactory {
     // LTTng views
     private static final String EVENTS_VIEW_ID = TmfEventsView.ID;
     private static final String HISTOGRAM_VIEW_ID = HistogramView.ID;
-    private static final String CONTROL_VIEW_ID = ControlView.ID;
+    //private static final String CONTROL_VIEW_ID = ControlView.ID;
     private static final String CONTROLFLOW_VIEW_ID = ControlFlowView.ID;
     private static final String RESOURCES_VIEW_ID = ResourcesView.ID;
     private static final String STATISTICS_VIEW_ID = TmfStatisticsView.ID;
@@ -63,9 +63,9 @@ public class PerspectiveFactory implements IPerspectiveFactory {
         topLeftFolder.addView(PROJECT_VIEW_ID);
 
         // Create the bottom left folder
-        IFolderLayout bottomLeftFolder = layout.createFolder(
-                "bottomLeftFolder", IPageLayout.BOTTOM, 0.70f, "topLeftFolder"); //$NON-NLS-1$ //$NON-NLS-2$
-        bottomLeftFolder.addView(CONTROL_VIEW_ID);
+//        IFolderLayout bottomLeftFolder = layout.createFolder(
+//                "bottomLeftFolder", IPageLayout.BOTTOM, 0.70f, "topLeftFolder"); //$NON-NLS-1$ //$NON-NLS-2$
+//        bottomLeftFolder.addView(CONTROL_VIEW_ID);
 
         // Create the top right folder
         IFolderLayout topRightFolder = layout.createFolder(

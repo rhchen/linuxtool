@@ -94,11 +94,11 @@ public class HistogramView extends TmfView {
     private HistogramTextControl fTimeSpanControl;
 
     // Histogram/request for the full trace range
-    private static FullTraceHistogram fFullTraceHistogram;
+    private FullTraceHistogram fFullTraceHistogram;
     private HistogramRequest fFullTraceRequest;
 
     // Histogram/request for the selected time range
-    private static TimeRangeHistogram fTimeRangeHistogram;
+    private TimeRangeHistogram fTimeRangeHistogram;
     private HistogramRequest fTimeRangeRequest;
 
     // ------------------------------------------------------------------------
@@ -110,6 +110,10 @@ public class HistogramView extends TmfView {
      */
     public HistogramView() {
         super(ID);
+    }
+    
+    public HistogramView(String viewId) {
+        super(viewId);
     }
 
     @Override
