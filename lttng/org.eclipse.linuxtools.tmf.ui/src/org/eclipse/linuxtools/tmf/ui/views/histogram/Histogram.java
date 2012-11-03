@@ -121,7 +121,7 @@ public abstract class Histogram implements ControlListener, PaintListener, KeyLi
     /**
      *  The histogram data model.
      */
-    protected final HistogramDataModel fDataModel;
+    private final HistogramDataModel fDataModel;
     /**
      * The histogram data model scaled to current resolution and screen width.
      */

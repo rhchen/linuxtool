@@ -95,7 +95,7 @@ public class FullTraceHistogram extends Histogram implements MouseMoveListener {
         fRangeStartTime = startTime;
         fRangeDuration = duration;
         fZoom.setNewRange(fRangeStartTime, fRangeDuration);
-        fDataModel.complete();
+        getDataModel().complete();
     }
 
     @Override
@@ -152,7 +152,7 @@ public class FullTraceHistogram extends Histogram implements MouseMoveListener {
                 newStart = newEnd - fZoom.getDuration();
             }
             fRangeStartTime = newStart;
-            fDataModel.complete();
+            getDataModel().complete();
         }
     }
 
@@ -187,7 +187,7 @@ public class FullTraceHistogram extends Histogram implements MouseMoveListener {
         long bucketSpan = Math.max(fScaledData.fBucketDuration,1);
         int rangeWidth = (int) (fRangeDuration / bucketSpan);
 
-        int left = (int) ((fRangeStartTime - fDataModel.getFirstBucketTime()) / bucketSpan);
+        int left = (int) ((fRangeStartTime - getDataModel().getFirstBucketTime()) / bucketSpan);
         int right = left + rangeWidth;
         int center = (left + right) / 2;
         int height = fCanvas.getSize().y;
